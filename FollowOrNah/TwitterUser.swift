@@ -13,6 +13,8 @@ class TwitterUser {
     var name = ""
     var imageUrl = ""
     
+    var userId = 0
+    
 }
 
 

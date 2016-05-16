@@ -38,10 +38,13 @@ class DecideViewController: UIViewController {
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: user.imageUrl)!) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             
             
-            dispatch_async(dispatch_get_main_queue(), { 
-                let image = UIImage(data: data!)
+            dispatch_async(dispatch_get_main_queue(), {
+                if let unwrpData = data {
+                    let image = UIImage(data: unwrpData)
+                    
+                    self.imageView.image = image
+                }
                 
-                self.imageView.image = image
             })
             
             
@@ -171,7 +174,10 @@ class DecideViewController: UIViewController {
                         
                         twitterUser.imageUrl = userDictionary["profile_image_url_https"] as! String
                         
+                        twitterUser.userId = userDictionary["id"] as! Int
+                            
                         self.twitterUsers.append(twitterUser)
+                        
                     }
                     
                     dispatch_async(dispatch_get_main_queue(), { 
@@ -193,18 +199,62 @@ class DecideViewController: UIViewController {
         
         
         
-        
-        
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     
     
     @IBAction func unfollowTapped(sender: AnyObject) {
+        
+        let user = twitterUsers.first
+        
+        let verifyAccountURL = NSURL(string: "https://api.twitter.com/1.1/friendships/destroy.json")
+        
+        let verifyAccountRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .POST, URL: verifyAccountURL, parameters: ["user_id": "\(user!.userId)"])
+        
+        verifyAccountRequest.account = account!
+        
+        verifyAccountRequest.performRequestWithHandler { (data: NSData!, response: NSHTTPURLResponse!, error: NSError!) in
+            
+            if error == nil {
+                print("roll tide")
+                
+                // !!!IMPORTANT!!!
+                // NSJSONSerialization use example
+                do {
+                    let responseJSONDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves) as! [String: AnyObject]
+                    
+                    print(responseJSONDictionary)
+                    
+                    
+                } catch {
+                    
+                }
+                
+                
+            } else {
+                print("we got a problem")
+            }
+        }
+        
+        twitterUsers.removeAtIndex(0)
+        showTopUser()
+        
     }
     
     
     @IBAction func keepFollowingTapped(sender: AnyObject) {
+        
+        twitterUsers.removeAtIndex(0)
+        showTopUser()
+        
     }
     
 
