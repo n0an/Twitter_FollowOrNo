@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Sign In View Controller-->
@@ -104,13 +105,53 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-kk-Rhl">
+                                <rect key="frame" x="261" y="159" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66H-mc-AbP">
+                                <rect key="frame" x="200" y="212" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EjP-tg-abN"/>
+                                    <constraint firstAttribute="height" constant="200" id="QGI-J5-hTy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRB-e0-SIq">
+                                <rect key="frame" x="20" y="460" width="60" height="30"/>
+                                <state key="normal" title="Unfollow"/>
+                                <connections>
+                                    <action selector="unfollowTapped:" destination="baq-T2-ksG" eventType="touchUpInside" id="IV5-Au-Vhg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhJ-xk-tQD">
+                                <rect key="frame" x="476" y="460" width="104" height="30"/>
+                                <state key="normal" title="Keep Following"/>
+                                <connections>
+                                    <action selector="keepFollowingTapped:" destination="baq-T2-ksG" eventType="touchUpInside" id="c3D-Fc-OGo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="l8G-kk-Rhl" firstAttribute="top" secondItem="HCY-l2-Kap" secondAttribute="bottom" constant="37" id="A7H-Bl-8xr"/>
+                            <constraint firstItem="66H-mc-AbP" firstAttribute="centerX" secondItem="sjf-34-WlP" secondAttribute="centerX" id="AtV-UB-ZVr"/>
+                            <constraint firstItem="mhJ-xk-tQD" firstAttribute="top" secondItem="66H-mc-AbP" secondAttribute="bottom" constant="48" id="Ehp-kh-EcT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tRB-e0-SIq" secondAttribute="leading" id="InN-tu-SUv"/>
                             <constraint firstItem="HCY-l2-Kap" firstAttribute="centerX" secondItem="sjf-34-WlP" secondAttribute="centerX" id="JUY-EG-orj"/>
+                            <constraint firstItem="tRB-e0-SIq" firstAttribute="top" secondItem="66H-mc-AbP" secondAttribute="bottom" constant="48" id="N27-GP-8M8"/>
+                            <constraint firstItem="66H-mc-AbP" firstAttribute="top" secondItem="l8G-kk-Rhl" secondAttribute="bottom" constant="32" id="XAb-Vd-aZO"/>
                             <constraint firstItem="HCY-l2-Kap" firstAttribute="top" secondItem="Zyw-D2-rpy" secondAttribute="bottom" constant="37" id="XEt-Eb-W20"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mhJ-xk-tQD" secondAttribute="trailing" id="dlp-3u-8Bh"/>
+                            <constraint firstItem="l8G-kk-Rhl" firstAttribute="centerX" secondItem="sjf-34-WlP" secondAttribute="centerX" id="smV-bE-Hgg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="friendLabel" destination="HCY-l2-Kap" id="JN7-Te-49p"/>
+                        <outlet property="imageView" destination="66H-mc-AbP" id="B0X-30-GSR"/>
+                        <outlet property="userNameLabel" destination="l8G-kk-Rhl" id="Zln-b6-Fix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukN-e4-48p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

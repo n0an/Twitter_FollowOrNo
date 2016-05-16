@@ -14,6 +14,7 @@
 		182989901CEA2F1B00BC5272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1829898E1CEA2F1B00BC5272 /* LaunchScreen.storyboard */; };
 		182989981CEA34D300BC5272 /* SelectAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182989971CEA34D300BC5272 /* SelectAccountViewController.swift */; };
 		1829899A1CEA3C7200BC5272 /* DecideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182989991CEA3C7200BC5272 /* DecideViewController.swift */; };
+		1829899C1CEA490E00BC5272 /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829899B1CEA490E00BC5272 /* TwitterUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		182989911CEA2F1B00BC5272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182989971CEA34D300BC5272 /* SelectAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAccountViewController.swift; sourceTree = "<group>"; };
 		182989991CEA3C7200BC5272 /* DecideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecideViewController.swift; sourceTree = "<group>"; };
+		1829899B1CEA490E00BC5272 /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				182989971CEA34D300BC5272 /* SelectAccountViewController.swift */,
 				182989991CEA3C7200BC5272 /* DecideViewController.swift */,
 				182989871CEA2F1B00BC5272 /* SignInViewController.swift */,
+				1829899B1CEA490E00BC5272 /* TwitterUser.swift */,
 				182989891CEA2F1B00BC5272 /* Main.storyboard */,
 				1829898C1CEA2F1B00BC5272 /* Assets.xcassets */,
 				1829898E1CEA2F1B00BC5272 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1829899C1CEA490E00BC5272 /* TwitterUser.swift in Sources */,
 				182989981CEA34D300BC5272 /* SelectAccountViewController.swift in Sources */,
 				182989881CEA2F1B00BC5272 /* SignInViewController.swift in Sources */,
 				1829899A1CEA3C7200BC5272 /* DecideViewController.swift in Sources */,
