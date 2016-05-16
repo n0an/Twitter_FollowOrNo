@@ -13,6 +13,7 @@
 		1829898D1CEA2F1B00BC5272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1829898C1CEA2F1B00BC5272 /* Assets.xcassets */; };
 		182989901CEA2F1B00BC5272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1829898E1CEA2F1B00BC5272 /* LaunchScreen.storyboard */; };
 		182989981CEA34D300BC5272 /* SelectAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182989971CEA34D300BC5272 /* SelectAccountViewController.swift */; };
+		1829899A1CEA3C7200BC5272 /* DecideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182989991CEA3C7200BC5272 /* DecideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1829898F1CEA2F1B00BC5272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182989911CEA2F1B00BC5272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182989971CEA34D300BC5272 /* SelectAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAccountViewController.swift; sourceTree = "<group>"; };
+		182989991CEA3C7200BC5272 /* DecideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				182989851CEA2F1B00BC5272 /* AppDelegate.swift */,
 				182989971CEA34D300BC5272 /* SelectAccountViewController.swift */,
+				182989991CEA3C7200BC5272 /* DecideViewController.swift */,
 				182989871CEA2F1B00BC5272 /* SignInViewController.swift */,
 				182989891CEA2F1B00BC5272 /* Main.storyboard */,
 				1829898C1CEA2F1B00BC5272 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				182989981CEA34D300BC5272 /* SelectAccountViewController.swift in Sources */,
 				182989881CEA2F1B00BC5272 /* SignInViewController.swift in Sources */,
+				1829899A1CEA3C7200BC5272 /* DecideViewController.swift in Sources */,
 				182989861CEA2F1B00BC5272 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

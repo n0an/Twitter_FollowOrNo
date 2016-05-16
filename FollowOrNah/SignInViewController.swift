@@ -34,6 +34,11 @@ class SignInViewController: UIViewController {
                     print("no accounts")
                 } else if allAcounts.count == 1 {
                     print("they only have one, let's use it")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("decideSegue", sender: allAcounts.first)
+
+                    })
+
                 } else {
                     print("they have more than one. let's ask which one they want")
                     
@@ -58,10 +63,21 @@ class SignInViewController: UIViewController {
             let selectVC = segue.destinationViewController as! SelectAccountViewController
             selectVC.accounts = sender as! [ACAccount]
         }
+        
+        if segue.identifier == "decideSegue" {
+            let decideVC = segue.destinationViewController as! DecideViewController
+            decideVC.account = sender as! ACAccount
+        }
+        
     }
     
     func moveToViewControllerWithAccount(account: ACAccount) {
         print("You made it!")
+        
+        // !!!IMPORTANT!!!
+        // TRANSFER SOME OBJECT WITH SEGUE
+        self.performSegueWithIdentifier("decideSegue", sender: account)
+        
     }
     
     
